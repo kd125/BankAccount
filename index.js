@@ -31,3 +31,14 @@ class BankAccount {
     this.transactions.push(chargeTransaction);
   }
 }
+
+// Testing
+
+let newAccount = new BankAccount(2356562632, "John Doe");
+console.log(newAccount);
+
+newAccount.deposit(15275);
+console.log(newAccount.balance());
+
+newAccount.charge("Bob Smith", 5350);
+console.log(newAccount.balance());
