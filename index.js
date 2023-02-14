@@ -27,7 +27,7 @@ class BankAccount {
   }
 
   charge(payee, amt) {
-    let chargeTransaction = new Transaction(amt, payee);
+    let chargeTransaction = new Transaction(-amt, payee);
     this.transactions.push(chargeTransaction);
   }
 }
@@ -40,5 +40,5 @@ console.log(newAccount);
 newAccount.deposit(15275);
 console.log(newAccount.balance());
 
-newAccount.charge("Bob Smith", 5350);
+newAccount.charge("Bob Smith", -5350);
 console.log(newAccount.balance());
